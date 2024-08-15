@@ -28,21 +28,21 @@ public class Libro {
 	@Column(name="editorial")
 	private String editorial;
 	@Column(name="num_paginas")
-	private int num_paginas;
+	private int numPaginas;
 	@Column(name="edicion")
 	private String edicion;
 	@Column(name="idioma")
 	private String idioma;
 	@Column(name="fecha_publicacion")
-	private Date fecha_Publicacion;
+	private Date fechaPublicacion;
 	@Column(name="descripcion")
 	private String descripcion;
 	@Column(name="tipo_pasta")
-	private String tipo_pasta;
+	private String tipoPasta;
 	@Column(name="ISBN")
 	private String ISBN;
 	@Column(name="num_ejemplares")
-	private int num_ejemplares;
+	private int numEjemplares;
 	@Column(name="portada")
 	private String portada;
 	@Column(name="presentacion")
@@ -63,18 +63,18 @@ public class Libro {
 	public Libro(int idLibro, String titulo, String editorial, int num_paginas, String edicion, String idioma,
 			Date fecha_Publicacion, String descripcion, String tipo_pasta, String iSBN, int num_ejemplares,
 			String portada, String presentacion, Double precio) {
-		super();
+	
 		this.idLibro = idLibro;
 		this.titulo = titulo;
 		this.editorial = editorial;
-		this.num_paginas = num_paginas;
+		this.numPaginas = num_paginas;
 		this.edicion = edicion;
 		this.idioma = idioma;
-		this.fecha_Publicacion = fecha_Publicacion;
+		this.fechaPublicacion = fecha_Publicacion;
 		this.descripcion = descripcion;
-		this.tipo_pasta = tipo_pasta;
-		ISBN = iSBN;
-		this.num_ejemplares = num_ejemplares;
+		this.tipoPasta = tipo_pasta;
+		this.ISBN = iSBN;
+		this.numEjemplares = num_ejemplares;
 		this.portada = portada;
 		this.presentacion = presentacion;
 		this.precio = precio;
@@ -106,12 +106,12 @@ public class Libro {
 		this.editorial = editorial;
 	}
 
-	public int getNum_paginas() {
-		return num_paginas;
+	public int getNumPaginas() {
+		return numPaginas;
 	}
 
-	public void setNum_paginas(int num_paginas) {
-		this.num_paginas = num_paginas;
+	public void setNumPaginas(int numPaginas) {
+		this.numPaginas = numPaginas;
 	}
 
 	public String getEdicion() {
@@ -130,12 +130,12 @@ public class Libro {
 		this.idioma = idioma;
 	}
 
-	public Date getFecha_Publicacion() {
-		return fecha_Publicacion;
+	public Date getFechaPublicacion() {
+		return fechaPublicacion;
 	}
 
-	public void setFecha_Publicacion(Date fecha_Publicacion) {
-		this.fecha_Publicacion = fecha_Publicacion;
+	public void setFechaPublicacion(Date fechaPublicacion) {
+		this.fechaPublicacion = fechaPublicacion;
 	}
 
 	public String getDescripcion() {
@@ -146,12 +146,12 @@ public class Libro {
 		this.descripcion = descripcion;
 	}
 
-	public String getTipo_pasta() {
-		return tipo_pasta;
+	public String getTipoPasta() {
+		return tipoPasta;
 	}
 
-	public void setTipo_pasta(String tipo_pasta) {
-		this.tipo_pasta = tipo_pasta;
+	public void setTipoPasta(String tipoPasta) {
+		this.tipoPasta = tipoPasta;
 	}
 
 	public String getISBN() {
@@ -159,15 +159,15 @@ public class Libro {
 	}
 
 	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+		this.ISBN = iSBN;
 	}
 
-	public int getNum_ejemplares() {
-		return num_ejemplares;
+	public int getNumEjemplares() {
+		return numEjemplares;
 	}
 
-	public void setNum_ejemplares(int num_ejemplares) {
-		this.num_ejemplares = num_ejemplares;
+	public void setNumEjemplares(int numEjemplares) {
+		this.numEjemplares = numEjemplares;
 	}
 
 	public String getPortada() {
@@ -212,12 +212,13 @@ public class Libro {
 
 	@Override
 	public String toString() {
-		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", num_paginas="
-				+ num_paginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fecha_Publicacion="
-				+ fecha_Publicacion + ", descripcion=" + descripcion + ", tipo_pasta=" + tipo_pasta + ", ISBN=" + ISBN
-				+ ", num_ejemplares=" + num_ejemplares + ", portada=" + portada + ", presentacion=" + presentacion
-				+ ", precio=" + precio + ", categoria=" + categoria + ", autor=" + autor + "]";
+		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", numPaginas="
+				+ numPaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechaPublicacion=" + fechaPublicacion
+				+ ", descripcion=" + descripcion + ", tipoPasta=" + tipoPasta + ", ISBN=" + ISBN + ", numEjemplares="
+				+ numEjemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
+				+ ", categoria=" + categoria + ", autor=" + autor + "]";
 	}
+
 	
 	
 	
