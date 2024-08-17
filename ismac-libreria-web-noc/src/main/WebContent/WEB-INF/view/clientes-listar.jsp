@@ -10,6 +10,9 @@
 <body>
 	
 	<h1> Clientes </h1>
+		<button onclick="window.location.href='/ismac-libreria-web-noc/clientes/findOne?opcion=1';return false;">
+                Agregar
+        </button>
 	<table>
 	 	<thead>
 	 		<tr>
@@ -26,17 +29,24 @@
 	 	<c:forEach var="item" items="${clientes}">
 	 		<tr>
 	 			<td>${item.idCliente}</td>
-	 			<td>${item.cedula}</td>
-	 			<td>${item.nombre}</td>
-	 			<td>${item.apellido}</td>
-	 			<td>${item.direccion}</td>
-	 			<td>${item.telefono}</td>
-	 			<td>${item.correo}</td>
-	 		</tr>
-	 	</c:forEach>
-	 		<tr></tr>
- 
-	 	</tbody>
-	</table>
+                <td>${item.cedula}</td>
+                <td>${item.nombre}</td>
+                <td>${item.apellido}</td>
+                <td>${item.direccion}</td>
+                <td>${item.telefono}</td>
+                <td>${item.correo}</td>
+                <td>
+                <button onclick="window.location.href='/ismac-libreria-web-noc/clientes/findOne?idCliente=${item.idCliente}&opcion=1';return false;">
+                Actualizar
+                </button>
+                <button onclick="window.location.href='/ismac-libreria-web-noc/clientes/findOne?idCliente=${item.idCliente}&opcion=2';return false;">
+                Eliminar
+                </button>
+                </td>
+              </tr> 
+            </c:forEach>
+         </tbody>   
+     </table>
+
 </body>
 </html>

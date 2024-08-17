@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +31,7 @@
 		<input type ="text" id="idioma" value="${libro.idioma }" />
 		<br/>
 		Fecha de Publicacion
-		<input type ="date" id="fechaPublicacion" value="${libro.fechaPublicacion }" />
+		<input type ="date" id="fechaPublicacion" value="${fn:substring(libro.fechaPublicacion,0,10) }" />
 		<br/>
 		Descripcion
 		<input type ="text" id="descripcion" value="${libro.descripcion }" />
@@ -54,17 +56,24 @@
 		<br/>
 		Categoria
 		<select id="idCategoria" name="idCategoria">
-			<option value="1"> 1 </option>
-			<option value="2"> 2 </option>
-			<option value="3"> 3 </option>			
+			<c:forEach var="item" items="${categorias}">
+				<option value="${item.idCategoria}" ${item.idCategoria == libro.categoria.idCategoria ? 'selected' : '' } > ${item.categoria} </option>
+			</c:forEach>
 		</select>
 		<br/>
 		
 		Autor
 		<select id="idAutor" name="idAutor">
-			<option value="1"> 1 </option>
-			<option value="2"> 2 </option>
-			<option value="3"> 3 </option>
+			<c:forEach var="item" items="${autores}">
+				<option value="${item.idAutor}" ${item.idAutor == libro.autor.idAutor ? 'selected' : '' } > ${item.nombre} ${item.apellido} </option>
+			</c:forEach>		
+		</select>
+		<br/>
+		
+		<button type="submit">Guardar</button>
+		<button type="button" onclick="window.location.href='/ismac-libreria-nocturno-web/libros2/findAll';return false;">Cancelar</button>
+
+			
 		</select>
 		<br/>
 		
