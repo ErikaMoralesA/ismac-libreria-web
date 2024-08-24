@@ -38,7 +38,7 @@ public class CategoriaController {
 			
 	}
 
-	@GetMapping("/finOne")
+	@GetMapping("/findOne")
 	public String findOne(@RequestParam("idCategoria")@Nullable Integer idCategoria
 			             ,@RequestParam("opcion")@Nullable Integer opcion
 			             ,Model model
@@ -84,7 +84,7 @@ public class CategoriaController {
 			
 		}
 		
-		return "redirect:/categorias/findAlla";
+		return "redirect:/categorias/findAll";
 		
 //		} catch (Exception e) {
 //		// TODO: handle exception
@@ -100,7 +100,7 @@ public class CategoriaController {
 		
 			categoriaDAO.del(idCategoria);
 			
-			return "redirect:/categorias/finAll";
+			return "redirect:/categorias/findAll";
 			
 	//	} catch (Exception e) {
 	//		// TODO: handle exception
