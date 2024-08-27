@@ -16,17 +16,17 @@
 <body>
 
 <nav></nav>
-<section class="px5 py-5">
+<section class="px-5 py-5">
 	<h1>Libros</h1>
 	
-	<div class="container" style="text-aling: center;">
+	<div class="container" style="text-align: center;">
 		<button class="btn btn-primary" onclick="window.location.href='/ismac-libreria-web-noc/libros2/findOne?opcion=1'; return false"> Agregar
 		</button>
 	</div>
 	<div class="table-responsive">
 	<table id="tabla1"
 		   name ="tabla1"
-		   data-height="600"		   
+		   data-height="600"
 		   data-search="true"
 		   data-pagination="true"
 		   data-toogle="tabla1"
@@ -85,7 +85,7 @@
 			</tr>
 				
 		</c:forEach>
-	
+		</tbody>
 	</table>
 	</div>
 	
@@ -111,11 +111,3 @@
 	
 </body>
 </html>
-
-
-
-
-
-
-
-
