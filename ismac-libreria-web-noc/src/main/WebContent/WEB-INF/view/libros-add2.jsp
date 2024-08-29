@@ -13,7 +13,11 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css"/>
 	
 </head>
+<<<<<<< HEAD
 <body> 
+=======
+<body>
+>>>>>>> branch 'master' of https://github.com/ErikaMoralesA/ismac-libreria-web-noc.git
 
 	<nav></nav>
 	
