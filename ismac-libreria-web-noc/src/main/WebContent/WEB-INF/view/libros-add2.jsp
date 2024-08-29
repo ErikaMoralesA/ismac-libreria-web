@@ -13,11 +13,7 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css"/>
 	
 </head>
-<<<<<<< HEAD
-<body> 
-=======
 <body>
->>>>>>> branch 'master' of https://github.com/ErikaMoralesA/ismac-libreria-web-noc.git
 
 	<nav></nav>
 	
@@ -27,6 +23,7 @@
 			<h1>Libros</h1>
 	
 			<form action="add" method="post" class="needs-validation" novalidate>
+			
 			<input type="hidden" id="idLibro" name="idLibro" value="${libro.idLibro}" />
 			
 			<div class="form-group">
@@ -36,12 +33,12 @@
 			
 			<div class="form-group">
 				<label for="editorial" class="form-label">Editorial</label>
-				<input class="form-control" type="text" id="editorial" name="editorial" value="${libro.editorial}" required />
+				<input class="form-control" type="text" id="editorial" name="editorial" value="${libro.editorial}" required/>
 			</div>
 			
 			<div class="form-group">
 				<label for="numPaginas" class="form-label">N° de páginas</label>
-				<input class="form-control" type="number" id="numPaginas" name="numPaginas" value="${libro.numPaginas}" required />
+				<input class="form-control" type="number" id="numPaginas" name="numPaginas" value="${libro.numPaginas}" required/>
 			</div>
 			
 			<div class="form-group">
@@ -51,32 +48,32 @@
 			
 			<div class="form-group">
 				<label for="idioma" class="form-label">Idioma</label>
-				<input class="form-control" type="text" id="idioma" name="idioma" value="${libro.idioma}" required />
+				<input class="form-control" type="text" id="idioma" name="idioma" value="${libro.idioma}" required/>
 			</div>
 			
 			<div class="form-group">
 				<label for="fechaPublicacion" class="form-label">Fecha de publicación</label>
-				<input class="form-control" type="date" id="fechaPublicacion" name="fechaPublicacion" value="${fn:substring(libro.fechaPublicacion,0,10)}" required />
+				<input class="form-control" type="date" id="fechaPublicacion" name="fechaPublicacion" value="${fn:substring(libro.fechaPublicacion,0,10)}" required/>
 			</div>
 			
 			<div class="form-group">
 				<label for="descripcion" class="form-label">Descripción</label>
-				<input class="form-control" type="text" id="descripcion" name="descripcion" value="${libro.descripcion}" />
+				<input class="form-control" type="text" id="descripcion" name="descripcion" value="${libro.descripcion}"/>
 			</div>
 			
 			<div class="form-group">
 				<label for="tipoPasta" class="form-label">Tipo pasta</label>
-				<input class="form-control" type="text" id="tipoPasta" name="tipoPasta" value="${libro.tipoPasta}" required />
+				<input class="form-control" type="text" id="tipoPasta" name="tipoPasta" value="${libro.tipoPasta}" required/>
 			</div>
 			
 			<div class="form-group">
 				<label for="ISBN" class="form-label">ISBN</label>
-				<input class="form-control" type="text" id="ISBN" name="ISBN" value="${libro.ISBN}" required />
+				<input class="form-control" type="text" id="ISBN" name="ISBN" value="${libro.ISBN}" required/>
 			</div>
 			
 			<div class="form-group">
 				<label for="numEjemplares" class="form-label">N° de ejemplares</label>
-				<input class="form-control" type="number" id="numEjemplares" name="numEjemplares" value="${libro.numEjemplares}" required />
+				<input class="form-control" type="number" id="numEjemplares" name="numEjemplares" value="${libro.numEjemplares}" required/>
 			</div>
 			
 			<div class="form-group">
@@ -86,18 +83,18 @@
 			
 			<div class="form-group">
 				<label for="presentacion" class="form-label">Presentación</label>
-				<input class="form-control" type="text" id="presentacion" name="presentacion" value="${libro.presentacion}" required />
+				<input class="form-control" type="text" id="presentacion" name="presentacion" value="${libro.presentacion}" required/>
 			</div>
 			
 			<div class="form-group">
 				<label for="precio" class="form-label">Precio</label>
-				<input class="form-control" step="any" type="number" id="precio" name="precio" value="${libro.precio}" required />
+				<input class="form-control" step="any" type="number" id="precio" name="precio" value="${libro.precio}" required/>
 			</div>
 			
 			
 			<div class="form-group">
 				<label for="idCategoria" class="form-label">Categoria</label>
-					<select class="form-select" id="idCategoria" name="idCategoria" required >
+					<select class="form-select" id="idCategoria" name="idCategoria" required>
 					<c:forEach var="item" items="${categorias}">
 						<option value="${item.idCategoria}" ${item.idCategoria == libro.categoria.idCategoria ? 'selected' : '' } > ${item.categoria} </option>
 					</c:forEach>						
@@ -107,7 +104,7 @@
 			
 			<div class="form-group">
 				<label for="idAutor" class="form-label">Autor</label>
-				<select class="form-select" id="idAutor" name="idAutor" required >
+				<select class="form-select" id="idAutor" name="idAutor" required>
 				<c:forEach var="item" items="${autores}">
 					<option value="${item.idAutor}" ${item.idAutor == libro.autor.idAutor ? 'selected' : '' } > ${item.nombre} ${item.apellido}</option>
 				</c:forEach>						
@@ -115,8 +112,8 @@
 			</div>
 		
 		
-			<button class="btn btn-primary" type="submit">Guardar</button>	
-			<button class="btn btn-primary" type="button" onclick="window.location.href='/ismac-libreria-matutino-web/libros2/findAll'; return false;">Cancelar</button>										
+			<button class="btn btn-success" type="submit">Guardar</button>	
+			<button class="btn btn-danger" type="button" onclick="window.location.href='/ismac-libreria-web-noc/libros2/findAll'; return false;">Cancelar</button>										
 			</form>
 		
 		</div>
@@ -130,29 +127,28 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table-es-MX.min.js"></script>
 
-		<script>
-			// Example starter JavaScript for disabling form submissions if there are invalid fields
-			(() => {
-			  'use strict'
-		 
-			  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-			  const forms = document.querySelectorAll('.needs-validation')
-		 
-			  // Loop over them and prevent submission
-			  Array.from(forms).forEach(form => {
-			    form.addEventListener('submit', event => {
-			      if (!form.checkValidity()) {
-			        event.preventDefault()
-			        event.stopPropagation()
-			      }
-		 
-			      form.classList.add('was-validated')
-			    }, false)
-			  })
-			})()
-		
-		</script>
-		
+<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(() => {
+	  'use strict'
+ 
+	  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	  const forms = document.querySelectorAll('.needs-validation')
+ 
+	  // Loop over them and prevent submission
+	  Array.from(forms).forEach(form => {
+	    form.addEventListener('submit', event => {
+	      if (!form.checkValidity()) {
+	        event.preventDefault()
+	        event.stopPropagation()
+	      }
+ 
+	      form.classList.add('was-validated')
+	    }, false)
+	  })
+	})()
+
+</script>
 
 </body>
 </html>
