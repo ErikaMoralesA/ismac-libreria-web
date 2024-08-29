@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css"/>
 	
 </head>
-<body>
+<body> 
 
 	<nav></nav>
 	
